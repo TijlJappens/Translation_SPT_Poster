@@ -108,7 +108,7 @@
 	$\bullet$ If two states carry different indices they cannot be $G$-equivalent.
     }
     
-    \block{Example}{
+    \block{Example 1}{
 	\begin{center}
 		\begin{tikzpicture}[scale=3]
 			\fill[fill=blue] (-2.2,2.5) rectangle (-1.8,-2.5);
@@ -135,7 +135,7 @@
 	$\bullet$ Let $\psi_1$ and $\psi_2$ be two $G$-invariant SRE states over the lattice $\ZZ$ with different $H^2(G,U(1))$-valued indices.\\
 	$\bullet$ Let $\omega_1=\bigotimes_{i\in\ZZ}\psi_1$ and $\omega_2=\bigotimes_{i\in\ZZ}\psi_2$ be the $G$-invariant, translation invariant SRE states over the lattice $\ZZ^2$ constructed in figure \ref{fig:1}.\\
 	$\bullet$ Can $\omega_1$ and $\omega_2$ ever be $G\times$translation-equivalent?\\\\
-	It turns out the answer is no because they carry different translation indices.
+	It turns out the answer is no because they carry different ($H^2(G,U(1))$-valued) translation indices.
     }
 
 
@@ -146,7 +146,31 @@
 	\textbf{Result 3:} $G$-invariant SRE states over the two dimensional lattice $\ZZ^2$ with two translation symmetries carry an $H^3(G,U(1))\oplus H^2(G,U(1))\oplus H^2(G,U(1))\oplus H^1(G,U(1))$-valued index.
     }
 
-    \block{Conclusions}{
+    \block{Example 2}{
+	\begin{center}
+		\begin{tikzpicture}[scale=3]
+		\fill[fill=blue] (-2.2,0.3) rectangle (-1.8,-0.3);
+       		\fill[fill=black] (-2,0) circle(3pt);
+   		\node[] at (-2, -3)   (a) {$\mathlarger{\mathlarger{\mathlarger{\psi}}}$};
+    		\node[] at (-1, 0)   (b) {$\mathlarger{\mathlarger{\mathlarger{\rightarrow}}}$};
+   		\node[] at (3.5, -3)   (c) {$\mathlarger{\mathlarger{\mathlarger{\omega=\bigotimes_{i\in\ZZ^2}\psi}}}$};
+    
+    		% loop over the lattice points
+    		\foreach \i in {0,...,7}
+      		\foreach \j in {-2,...,2}{
+			\fill[fill=blue] (\i-0.2,\j+0.3) rectangle (\i+0.2,\j-0.3);
+        		\fill[fill=black] (\i,\j) circle(3pt);
+      		};
+		\end{tikzpicture}
+	\end{center}
+
+	\captionof{figure}{\label{fig:2}This displays a way to construct a state on the lattice $\ZZ^2$ that is translation invariant in two directions using a state on the trival lattice with only one site.}
+	$\:$\\
+	$\bullet$ In this example we define two translation automorphisms. $\gamma_1$ translating to the right and $\gamma_2$ translating upward.\\
+	$\bullet$ Let $\psi_1$ and $\psi_2$ be two $G$-invariant SRE states over the trivial lattice (with just one element) with different $H^1(G,U(1))$-valued indices.\\
+	$\bullet$ Let $\omega_1=\bigotimes_{i\in\ZZ^2}\psi_1$ and $\omega_2=\bigotimes_{i\in\ZZ^2}\psi_2$ be the $G$-invariant, translation invariant (in both directions) SRE states over the lattice $\ZZ^2$ constructed in figure \ref{fig:2}.\\
+	$\bullet$ Can $\omega_1$ and $\omega_2$ ever be $G\times$translation-equivalent?\\\\
+	It turns out the answer is no because they carry different ($H^1(G,U(1))$-valued) 2-translation indices.
     }
     
     \block{References}{
